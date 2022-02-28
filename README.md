@@ -16,3 +16,9 @@
 7     | [JavaBeans(TM) Activation Framework](https://mvnrepository.com/artifact/javax.activation/activation/) | [1.1.1](https://mvnrepository.com/artifact/javax.activation/activation/1.1.1) | Предоставляет API для создания и сборки сообщений SOAP.
 8     | [JAXB API](https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api/) | [2.3.1](https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api/2.3.1) | JAXB предоставляет две основные возможности: маршаллирование Java объектов в XML и наоборот, то есть демаршализация из XML обратно в Java объект.
 9     | [JAXB Runtime](https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime/) | [3.0.2](https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime/3.0.2) | JAXB (JSR 222) Эталонная реализация
+
+## Плагины
+
+№     | Название (ссылка)            | Версия | Описание
+------|------------------------------|--------|--------------------------------
+1     | [JAXB 2 Maven Plugin](https://mvnrepository.com/artifact/org.codehaus.mojo/jaxb2-maven-plugin) | [2.5.0](https://mvnrepository.com/artifact/org.codehaus.mojo/jaxb2-maven-plugin/2.5.0) | Плагин Mojo JAXB-2 Maven используется для создания графа объектов из XSD на основе реализации JAXB 2.x и для создания XSD из аннотированных классов Java JAXB.  
