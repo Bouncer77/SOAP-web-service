@@ -1,4 +1,4 @@
-package com.example.demo;
+package ru.pczver.spring.soap;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

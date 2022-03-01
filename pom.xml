@@ -9,7 +9,7 @@
 		<version>2.6.4</version>
 	</parent>
 
-	<groupId>ru.pc-zver.spring</groupId>
+	<groupId>ru.pczver.spring</groupId>
 	<artifactId>soap</artifactId>
 	<version>1.0.0</version>
 	<name>Producing a SOAP web service</name>
