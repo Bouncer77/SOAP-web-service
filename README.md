@@ -21,4 +21,33 @@
 
 №     | Название (ссылка)            | Версия | Описание
 ------|------------------------------|--------|--------------------------------
-1     | [JAXB 2 Maven Plugin](https://mvnrepository.com/artifact/org.codehaus.mojo/jaxb2-maven-plugin) | [2.5.0](https://mvnrepository.com/artifact/org.codehaus.mojo/jaxb2-maven-plugin/2.5.0) | Плагин Mojo JAXB-2 Maven используется для создания графа объектов из XSD на основе реализации JAXB 2.x и для создания XSD из аннотированных классов Java JAXB.  
+1     | [JAXB 2 Maven Plugin](https://mvnrepository.com/artifact/org.codehaus.mojo/jaxb2-maven-plugin) | [2.5.0](https://mvnrepository.com/artifact/org.codehaus.mojo/jaxb2-maven-plugin/2.5.0) | Плагин Mojo JAXB-2 Maven используется для создания графа объектов из XSD на основе реализации JAXB 2.x и для создания XSD из аннотированных классов Java JAXB.
+
+## Тестирование
+
+```bash
+# Получить файл wsdl
+http://localhost:8080/ws/countries.wsdl
+
+# Use data from file
+curl --header "content-type: text/xml" -d @request.xml http://localhost:8080/ws
+
+# Use inline XML data
+curl <<-EOF -fsSL -H "content-type: text/xml" -d @- http://localhost:8080/ws \
+  > target/response.xml && xmllint --format target/response.xml
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                                  xmlns:gs="http://spring.io/guides/gs-producing-web-service">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:getCountryRequest>
+         <gs:name>Spain</gs:name>
+      </gs:getCountryRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+EOF
+```
+
+
+
