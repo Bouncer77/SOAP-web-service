@@ -49,5 +49,18 @@ curl <<-EOF -fsSL -H "content-type: text/xml" -d @- http://localhost:8080/ws \
 EOF
 ```
 
+## Инструкция по развертыванию (Деплой)
+
+```bash
+# Сохранить образ в Linux архив
+docker save soap_image -o soap_image.tar
+
+# Загрузить образ в Docker
+docker load -i soap_image.tar
+
+# Запустить контейнер на основе докер образа
+docker run --name soap_container -p 80:8080 -d soap_image
+```
+
 
 
